@@ -10,6 +10,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.Date;
 
 import static org.quartz.JobBuilder.newJob;
 import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
@@ -54,8 +55,11 @@ public class AlertRabbit {
             scheduler.start();
             JobDataMap data = new JobDataMap();
             data.put("store", store);
+            JobDataMap cn = new JobDataMap();
+            cn.put("con", connect);
             JobDetail job = newJob(Rabbit.class)
                     .usingJobData(data)
+                    .usingJobData(cn)
                     .build();
             SimpleScheduleBuilder times = simpleSchedule()
                     .withIntervalInSeconds(requestTime)
@@ -65,11 +69,11 @@ public class AlertRabbit {
                     .withSchedule(times)
                     .build();
             scheduler.scheduleJob(job, trigger);
-            Thread.sleep(5000);
-            scheduler.shutdown();
+          //  Thread.sleep(5000);
+           // scheduler.shutdown();
             System.out.println(store);
         }
-    }
+}
 
     class Rabbit implements Job {
 
@@ -81,7 +85,17 @@ public class AlertRabbit {
         public void execute(JobExecutionContext context) throws JobExecutionException {
             System.out.println("Rabbit runs here ...");
             List<Long> store = (List<Long>) context.getJobDetail().getJobDataMap().get("store");
+            Connection connection = (Connection) context.getJobDetail().getJobDataMap().get("con");
             store.add(System.currentTimeMillis());
+            Date date = new Date();
+            try (PreparedStatement statement = connection
+                    .prepareStatement("INSERT INTO rabbit(created_date) VALUES(?);")) {
+
+                statement.setDate(1, (java.sql.Date) date);
+                statement.execute();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
         }
 
         public static String getTableScheme(Connection connection, String tableName) throws SQLException {
