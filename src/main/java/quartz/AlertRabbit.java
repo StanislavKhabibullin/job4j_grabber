@@ -55,11 +55,9 @@ public class AlertRabbit {
             scheduler.start();
             JobDataMap data = new JobDataMap();
             data.put("store", store);
-            JobDataMap cn = new JobDataMap();
-            cn.put("con", connect);
+            data.put("con", connect);
             JobDetail job = newJob(Rabbit.class)
                     .usingJobData(data)
-                    .usingJobData(cn)
                     .build();
             SimpleScheduleBuilder times = simpleSchedule()
                     .withIntervalInSeconds(requestTime)
@@ -69,8 +67,8 @@ public class AlertRabbit {
                     .withSchedule(times)
                     .build();
             scheduler.scheduleJob(job, trigger);
-          //  Thread.sleep(5000);
-           // scheduler.shutdown();
+            Thread.sleep(10000);
+            scheduler.shutdown();
             System.out.println(store);
         }
 }
