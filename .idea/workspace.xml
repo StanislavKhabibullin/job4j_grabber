@@ -22,12 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94afd003-517f-4de3-b34f-e4e1360f0214" name="Default Changelist" comment="2. Парсинг HTML страницы. [#260358]">
+    <list default="true" id="94afd003-517f-4de3-b34f-e4e1360f0214" name="Default Changelist" comment="загрузка gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/html/SqlRuParse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/html/SqlRuParse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/quartz/AlertRabbit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/quartz/AlertRabbit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/html/SqlRuParse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/html/SqlRuParse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/quartz/AlertRabbit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/quartz/AlertRabbit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/quartz/Rabbit.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +179,28 @@
       <option name="project" value="LOCAL" />
       <updated>1625105880257</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="2. Парсинг HTML страницы. [#260358]">
+      <created>1625120165243</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1625120165244</updated>
+    </task>
+    <task id="LOCAL-00012" summary="загрузка gitignore">
+      <created>1625120284550</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1625120284550</updated>
+    </task>
+    <task id="LOCAL-00013" summary="загрузка gitignore">
+      <created>1625120353383</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1625120353383</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,7 +221,8 @@
     <MESSAGE value="1. Quartz [#175122]" />
     <MESSAGE value="1.1. Job c параметрами [#260360]" />
     <MESSAGE value="2. Парсинг HTML страницы. [#260358]" />
-    <option name="LAST_COMMIT_MESSAGE" value="2. Парсинг HTML страницы. [#260358]" />
+    <MESSAGE value="загрузка gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="загрузка gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="42" key="#Inspections" timestamp="1624340761465">
@@ -221,22 +241,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1624859464162" />
-    <state width="1323" height="189" key="GridCell.Tab.0.bottom" timestamp="1625120016316">
+    <state width="1323" height="189" key="GridCell.Tab.0.bottom" timestamp="1625168350532">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="189" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1625120016316" />
-    <state width="1323" height="189" key="GridCell.Tab.0.center" timestamp="1625120016316">
+    <state width="1323" height="189" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1625168350532" />
+    <state width="1323" height="189" key="GridCell.Tab.0.center" timestamp="1625168350532">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="189" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1625120016316" />
-    <state width="1323" height="189" key="GridCell.Tab.0.left" timestamp="1625120016316">
+    <state width="1323" height="189" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1625168350532" />
+    <state width="1323" height="189" key="GridCell.Tab.0.left" timestamp="1625168350531">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="189" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1625120016316" />
-    <state width="1323" height="189" key="GridCell.Tab.0.right" timestamp="1625120016316">
+    <state width="1323" height="189" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1625168350531" />
+    <state width="1323" height="189" key="GridCell.Tab.0.right" timestamp="1625168350532">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="189" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1625120016316" />
+    <state width="1323" height="189" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1625168350532" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1625117746658">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -257,10 +277,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1624340330839" />
-    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1625105885212">
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1625120355684">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1625105885212" />
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1625120355684" />
     <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1625028498073">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -280,7 +300,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/html/SqlRuParse.java</url>
-          <line>13</line>
+          <line>15</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
