@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="94afd003-517f-4de3-b34f-e4e1360f0214" name="Default Changelist" comment="2. Парсинг HTML страницы. [#260358]">
+      <change beforePath="$PROJECT_DIR$/src/main/java/html/SqlRuParse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/html/SqlRuParse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/quartz/AlertRabbit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/quartz/AlertRabbit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/html/SqlRuParse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/html/SqlRuParse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/quartz/AlertRabbit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/quartz/AlertRabbit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/quartz/Rabbit.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1.4\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1uI1e3Oo5C4G6ao48j3IE0UQ67v" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/job4j_tracker" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="org.infernus.idea.checkstyle.CheckStyleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Application.SqlRuParse">
+    <configuration name="AlertRabbit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="quartz.AlertRabbit" />
+      <module name="job4j_grabber" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="quartz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SqlRuParse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="html.SqlRuParse" />
+      <module name="job4j_grabber" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="html.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SqlRuParse" />
+        <item itemvalue="Application.AlertRabbit" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94afd003-517f-4de3-b34f-e4e1360f0214" name="Default Changelist" comment="" />
+      <created>1624338381743</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624338381743</updated>
+    </task>
+    <task id="LOCAL-00001" summary="1. подключение maven к проекту">
+      <created>1624339871226</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624339871226</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1. подключение checkstyle к проекту">
+      <created>1624340372776</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624340372776</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1. подключение travis к проекту">
+      <created>1624342058258</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624342058258</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1. подключение travis к проекту">
+      <created>1624342406215</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624342406215</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1. подключение travis к проекту">
+      <created>1624853182541</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624853182541</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1. Quartz [#175122]">
+      <created>1624856652542</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624856652542</updated>
+    </task>
+    <task id="LOCAL-00007" summary="1. Quartz [#175122]">
+      <created>1624906473529</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624906473530</updated>
+    </task>
+    <task id="LOCAL-00008" summary="1.1. Job c параметрами [#260360]">
+      <created>1624945284560</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624945284560</updated>
+    </task>
+    <task id="LOCAL-00009" summary="1.1. Job c параметрами [#260360]">
+      <created>1625024645542</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1625024645542</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2. Парсинг HTML страницы. [#260358]">
+      <created>1625105880257</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1625105880257</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1. подключение maven к проекту" />
+    <MESSAGE value="1. подключение checkstyle к проекту" />
+    <MESSAGE value="1. подключение travis к проекту" />
+    <MESSAGE value="1. Quartz [#175122]" />
+    <MESSAGE value="1.1. Job c параметрами [#260360]" />
+    <MESSAGE value="2. Парсинг HTML страницы. [#260358]" />
+    <option name="LAST_COMMIT_MESSAGE" value="2. Парсинг HTML страницы. [#260358]" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="309" y="42" key="#Inspections" timestamp="1624340761465">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1624340761465" />
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1624859167425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1624859167425" />
+    <state x="404" y="53" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1624339005930">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="404" y="53" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.728@0.0.1366.728" timestamp="1624339005930" />
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1624859464162">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1624859464162" />
+    <state width="1323" height="189" key="GridCell.Tab.0.bottom" timestamp="1625120016316">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="189" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1625120016316" />
+    <state width="1323" height="189" key="GridCell.Tab.0.center" timestamp="1625120016316">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="189" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1625120016316" />
+    <state width="1323" height="189" key="GridCell.Tab.0.left" timestamp="1625120016316">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="189" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1625120016316" />
+    <state width="1323" height="189" key="GridCell.Tab.0.right" timestamp="1625120016316">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="189" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1625120016316" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1625117746658">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1625117746658" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1625117746658">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1625117746658" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1625117746657">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1625117746657" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1625117746658">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1625117746658" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1624340330839">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1624340330839" />
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1625105885212">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1625105885212" />
+    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1625028498073">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1625028498073" />
+    <state x="274" y="25" key="new project wizard" timestamp="1624338889660">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="274" y="25" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1624338889659" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/quartz/AlertRabbit.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/html/SqlRuParse.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

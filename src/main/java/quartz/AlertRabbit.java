@@ -10,14 +10,14 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import java.util.Date;
+import java.sql.Date;
 
 import static org.quartz.JobBuilder.newJob;
 import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
 import static org.quartz.TriggerBuilder.newTrigger;
 
 public class AlertRabbit {
-
+/*
     private static String pathtoproperties
             = "C:\\projects\\job4j_grabber\\src\\main\\resources\\rabbit.properties";
     private static Connection connect;
@@ -41,6 +41,7 @@ public class AlertRabbit {
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException, InterruptedException, SchedulerException, IOException {
             AlertRabbit rabbit = new AlertRabbit();
+
         int requestTime = rabbit.init();
             List<Long> store = new ArrayList<>();
             try (Statement statement = connect.createStatement()) {
@@ -73,7 +74,7 @@ public class AlertRabbit {
         }
 }
 
-    class Rabbit implements Job {
+   public static class Rabbit implements Job {
 
         public Rabbit() {
             System.out.println(hashCode());
@@ -89,7 +90,7 @@ public class AlertRabbit {
             try (PreparedStatement statement = connection
                     .prepareStatement("INSERT INTO rabbit(created_date) VALUES(?);")) {
 
-                statement.setDate(1, (java.sql.Date) date);
+                statement.setDate(1, date);
                 statement.execute();
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
@@ -110,6 +111,8 @@ public class AlertRabbit {
             }
             return scheme.toString();
         }
+
+ */
     }
 
 

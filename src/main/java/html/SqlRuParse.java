@@ -8,14 +8,20 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 
 public class SqlRuParse {
+    @SuppressWarnings("checkstyle:OperatorWrap")
     public static void main(String[] args) throws IOException {
         Document doc = Jsoup.connect("https://www.sql.ru/forum/job-offers").get();
         Elements row = doc.select(".postslisttopic");
         for (Element td
                 :row) {
             Element href = td.child(0);
+            Elements ird = td.getAllElements();
             System.out.println(href.attr("href"));
             System.out.println(href.text());
+            for (Element fd
+                    :ird) {
+                System.out.println(fd);
+            }
 
         }
 
