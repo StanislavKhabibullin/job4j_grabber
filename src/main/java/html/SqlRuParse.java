@@ -4,8 +4,10 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import utils.SqlRuDateTimeParser;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class SqlRuParse {
@@ -23,6 +25,8 @@ public class SqlRuParse {
             System.out.println(href.text());
            Element pot = rtp.get(i);
            System.out.println("Время опубликования объявления - " + pot.text());
+           LocalDateTime test = new SqlRuDateTimeParser().parse(pot.text());
+           System.out.println("Testovaya data - " + test);
            i = i + 2;
         }
 
