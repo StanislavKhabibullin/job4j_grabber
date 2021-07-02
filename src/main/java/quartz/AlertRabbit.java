@@ -17,7 +17,7 @@ import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
 import static org.quartz.TriggerBuilder.newTrigger;
 
 public class AlertRabbit {
-/*
+
     private static String pathtoproperties
             = "C:\\projects\\job4j_grabber\\src\\main\\resources\\rabbit.properties";
     private static Connection connect;
@@ -72,48 +72,48 @@ public class AlertRabbit {
             scheduler.shutdown();
             System.out.println(store);
         }
-}
 
    public static class Rabbit implements Job {
 
-        public Rabbit() {
-            System.out.println(hashCode());
-        }
+       public Rabbit() {
+           System.out.println(hashCode());
+       }
 
-        @Override
-        public void execute(JobExecutionContext context) throws JobExecutionException {
-            System.out.println("Rabbit runs here ...");
-            List<Long> store = (List<Long>) context.getJobDetail().getJobDataMap().get("store");
-            Connection connection = (Connection) context.getJobDetail().getJobDataMap().get("con");
-            store.add(System.currentTimeMillis());
-            Date date = new Date();
-            try (PreparedStatement statement = connection
-                    .prepareStatement("INSERT INTO rabbit(created_date) VALUES(?);")) {
+       @Override
+       public void execute(JobExecutionContext context) throws JobExecutionException {
+           System.out.println("Rabbit runs here ...");
+           List<Long> store = (List<Long>) context.getJobDetail().getJobDataMap().get("store");
+           Connection connection = (Connection) context.getJobDetail().getJobDataMap().get("con");
+           store.add(System.currentTimeMillis());
+           Date date;
+           date = new Date(new java.util.Date().getTime());
+           try (PreparedStatement statement = connection
+                   .prepareStatement("INSERT INTO rabbit(created_date) VALUES(?);")) {
 
-                statement.setDate(1, date);
-                statement.execute();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-        }
+               statement.setDate(1, date);
+               statement.execute();
+           } catch (SQLException throwables) {
+               throwables.printStackTrace();
+           }
+       }
 
-        public static String getTableScheme(Connection connection, String tableName) throws SQLException {
-            StringBuilder scheme = new StringBuilder();
-            DatabaseMetaData metaData = connection.getMetaData();
-            try (ResultSet columns = metaData.getColumns(null, null,
-                    tableName, null)) {
-                scheme.append(String.format("%-15s %-15s%n", "column", "type"));
-                while (columns.next()) {
-                    scheme.append(String.format("%-15s %-15s%n",
-                            columns.getString("COLUMN_NAME"),
-                            columns.getString("TYPE_NAME")));
-                }
-            }
-            return scheme.toString();
-        }
+       public static String getTableScheme(Connection connection, String tableName) throws SQLException {
+           StringBuilder scheme = new StringBuilder();
+           DatabaseMetaData metaData = connection.getMetaData();
+           try (ResultSet columns = metaData.getColumns(null, null,
+                   tableName, null)) {
+               scheme.append(String.format("%-15s %-15s%n", "column", "type"));
+               while (columns.next()) {
+                   scheme.append(String.format("%-15s %-15s%n",
+                           columns.getString("COLUMN_NAME"),
+                           columns.getString("TYPE_NAME")));
+               }
+           }
+           return scheme.toString();
+       }
 
- */
-    }
+   }
+}
 
 
 
