@@ -7,7 +7,9 @@ import org.jsoup.select.Elements;
 import utils.SqlRuDateTimeParser;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class SqlRuParse {
@@ -26,7 +28,7 @@ public class SqlRuParse {
            Element pot = rtp.get(i);
            System.out.println("Время опубликования объявления - " + pot.text());
            LocalDateTime test = new SqlRuDateTimeParser().parse(pot.text());
-           System.out.println("Testovaya data - " + test);
+           System.out.println("Formatted data - " + test.format(DateTimeFormatter.ofPattern("d MMM yy, HH:mm")));
            i = i + 2;
         }
 
