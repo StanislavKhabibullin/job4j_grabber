@@ -35,18 +35,29 @@ public class SqlRuDateTimeParser implements DateTimeParser {
             }
             try {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMM yy, HH:mm");
+                DateTimeFormatter formatterForMay = DateTimeFormatter.ofPattern("d MMMM yy, HH:mm");
                 String[] mas1 = parse.split(" ");
                 String stroka = mas1[0];
-                for (int i = 1; i < mas1.length; i++) {
-                    if (i == 1) {
-                        stroka = stroka + " " + mas1[i] + ".";
-                    } else {
-                        stroka = stroka + " " + mas1[i];
+                System.out.println(mas1[1]);
+                if (!mas1[1].equals("май")) {
+                    for (int i = 1; i < mas1.length; i++) {
+                        if (i == 1) {
+                            stroka = stroka + " " + mas1[i] + ".";
+                        } else {
+                            stroka = stroka + " " + mas1[i];
+                        }
                     }
+                    System.out.println(stroka);
+                    LocalDateTime localDateTime = LocalDateTime.parse(stroka, formatter);
+                    return localDateTime;
+                } else {
+                    mas1[1] = "мая";
+                    for (int i = 1; i < mas1.length; i++) {
+                            stroka = stroka + " " + mas1[i];
+                    }
+                    LocalDateTime localDateTime = LocalDateTime.parse(stroka, formatterForMay);
+                    return localDateTime;
                 }
-                System.out.println(stroka);
-                LocalDateTime localDateTime = LocalDateTime.parse(stroka, formatter);
-                return localDateTime;
             } catch (DateTimeParseException exc) {
                 System.out.println("Is not parseble date - " + parse);
                 throw exc;
