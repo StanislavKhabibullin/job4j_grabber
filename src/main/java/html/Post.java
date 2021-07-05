@@ -1,6 +1,7 @@
 package html;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Post {
     private int id;
@@ -60,11 +61,11 @@ public class Post {
     @Override
     public String toString() {
         return "Post{"
-                + "id=" + id
-                + ", title='" + title + '\''
-                + ", link='" + link + '\''
-                + ", description='" + description + '\''
-                + ", created=" + created
+                + "id = " + id
+                + ", title = " + title + '\''
+                + ", link = '" + link + '\''
+                + ", description = '" + description + '\''
+                + ", created = " + "\n" + created.format(DateTimeFormatter.ofPattern("d MMM yy, HH:mm"))
                 + '}';
     }
 }

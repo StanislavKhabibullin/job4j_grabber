@@ -39,8 +39,40 @@ public class SqlRuDateTimeParser implements DateTimeParser {
                 String[] mas1 = parse.split(" ");
                 String stroka = mas1[0];
                 System.out.println(mas1[1]);
-                if (!mas1[1].equals("май")) {
-                    for (int i = 1; i < mas1.length; i++) {
+                if (mas1[1].equals("май")) {
+                    mas1[1] = "мая";
+                    for (int i = 1; i < 4; i++) {
+                        stroka = stroka + " " + mas1[i];
+                    }
+                    LocalDateTime localDateTime = LocalDateTime.parse(stroka, formatterForMay);
+
+                    return localDateTime;
+                } else if (mas1[1].equals("фев")) {
+                    mas1[1] = "февр.";
+                    for (int i = 1; i < 4; i++) {
+                        stroka = stroka + " " + mas1[i];
+                    }
+                    LocalDateTime localDateTime = LocalDateTime.parse(stroka, formatter);
+
+                    return localDateTime;
+                } else if (mas1[1].equals("сен")) {
+                    mas1[1] = "сент.";
+                    for (int i = 1; i < 4; i++) {
+                        stroka = stroka + " " + mas1[i];
+                    }
+                    LocalDateTime localDateTime = LocalDateTime.parse(stroka, formatter);
+
+                    return localDateTime;
+                } else if (mas1[1].equals("ноя")) {
+                    mas1[1] = "нояб.";
+                    for (int i = 1; i < 4; i++) {
+                        stroka = stroka + " " + mas1[i];
+                    }
+                    LocalDateTime localDateTime = LocalDateTime.parse(stroka, formatter);
+
+                    return localDateTime;
+                } else {
+                    for (int i = 1; i < 4; i++) {
                         if (i == 1) {
                             stroka = stroka + " " + mas1[i] + ".";
                         } else {
@@ -49,13 +81,6 @@ public class SqlRuDateTimeParser implements DateTimeParser {
                     }
                     System.out.println(stroka);
                     LocalDateTime localDateTime = LocalDateTime.parse(stroka, formatter);
-                    return localDateTime;
-                } else {
-                    mas1[1] = "мая";
-                    for (int i = 1; i < mas1.length; i++) {
-                            stroka = stroka + " " + mas1[i];
-                    }
-                    LocalDateTime localDateTime = LocalDateTime.parse(stroka, formatterForMay);
                     return localDateTime;
                 }
             } catch (DateTimeParseException exc) {
