@@ -15,7 +15,20 @@ import java.util.*;
 public class SqlRuParse {
     public static List<Post> base = new ArrayList<>();
 
-    public static void parsingMethod(Document doc) {
+    public static String parsingVacancy(String urlAdress) throws IOException {
+        Document document = Jsoup.connect(urlAdress).get();
+        Elements descr = document.getElementsByClass("msgBody");
+       /* int i = 0;
+        for (Element stroka
+                :descr) {
+            System.out.println("DESCRIPTION - " + "index = " + i++ + ": " + stroka.text());
+        }
+
+        */
+        return descr.get(1).text();
+    }
+
+    public static void parsingMethod(Document doc) throws IOException {
         Elements rtp = doc.getElementsByClass("altCol").after(".postslisttopic");
         Elements row = doc.select(".postslisttopic");
         Integer i = 1;
@@ -23,6 +36,7 @@ public class SqlRuParse {
                 :row) {
             Element href = td.child(0);
             System.out.println(href.attr("href"));
+            String descripton = parsingVacancy(href.attr("href"));
 
             System.out.println(href.text());
 
@@ -32,7 +46,7 @@ public class SqlRuParse {
 
             System.out.println("Formatted data - " + test.format(DateTimeFormatter.ofPattern("d MMM yy, HH:mm")));
             i = i + 2;
-            base.add(new Post(0, "no title", href.attr("href"), href.text(), test));
+            base.add(new Post(0, href.text(), href.attr("href"), descripton, test));
         }
 
     }
