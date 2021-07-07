@@ -2,6 +2,7 @@ package html;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class Post {
     private int id;
@@ -67,5 +68,26 @@ public class Post {
                 + ", description = '" + description + '\''
                 + ", created = " + "\n" + created.format(DateTimeFormatter.ofPattern("d MMM yy, HH:mm"))
                 + '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Post)) {
+            return false;
+        }
+        Post post = (Post) o;
+        return getId() == post.getId()
+                && Objects.equals(getTitle(), post.getTitle())
+                && Objects.equals(getLink(), post.getLink())
+                && Objects.equals(getDescription(), post.getDescription())
+                && Objects.equals(getCreated(), post.getCreated());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getTitle(), getLink(), getDescription(), getCreated());
     }
 }
