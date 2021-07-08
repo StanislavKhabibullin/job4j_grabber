@@ -51,7 +51,7 @@ public class StoreSqlBase implements Store {
 
     private void insert(Post post) throws SQLException {
         try (PreparedStatement preparedStatement = connect.prepareStatement(
-                "insert into razr(title, link, description, created) VALUES(?, ?, ?, ?)"
+                "insert into razr(title, link, description, created) VALUES(?, ?, ?, ?) ON CONFLICT DO NOTHING"
         )) {
             preparedStatement.setString(1, post.getTitle());
             preparedStatement.setString(2, post.getLink());

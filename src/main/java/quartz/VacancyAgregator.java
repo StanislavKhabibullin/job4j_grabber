@@ -27,7 +27,7 @@ public class VacancyAgregator implements Grab {
         scheduler.start();                                               // работами
         JobDetail jobDetail = newJob(Vacant.class).build();              //quartz каждый раз создает объект с типом org.quartz.Job. класс, реализующий этот интерфейс Vacant.
         SimpleScheduleBuilder times = simpleSchedule()
-                .withIntervalInHours(12)
+                .withIntervalInSeconds(20)
                 .repeatForever();
         Trigger trigger = newTrigger()
                 .startNow()
@@ -60,6 +60,7 @@ public class VacancyAgregator implements Grab {
         @Override
         public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
             System.out.println("Something need to execute ....");
+
         }
     }
 }
