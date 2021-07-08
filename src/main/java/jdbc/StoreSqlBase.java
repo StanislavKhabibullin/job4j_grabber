@@ -40,7 +40,7 @@ public class StoreSqlBase implements Store {
                             + "title varchar(250),"
                             + "link varchar(250),"
                             + "description text,"
-                            + "created TIMESTAMP);"
+                            + "created TIMESTAMP NOT NULL UNIQUE);"
             );
             statement.execute(sql);
             System.out.println(getTableScheme(connect, "razr"));
