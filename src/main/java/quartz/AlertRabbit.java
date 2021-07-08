@@ -69,7 +69,7 @@ public class AlertRabbit {
                     .build();
             scheduler.scheduleJob(job, trigger);
             Thread.sleep(10000);
-            scheduler.shutdown();
+          //  scheduler.shutdown();
             System.out.println(store);
         }
 
