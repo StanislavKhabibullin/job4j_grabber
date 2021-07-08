@@ -8,7 +8,6 @@ import utils.DateTimeParser;
 import utils.SqlRuDateTimeParser;
 
 import java.io.IOException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -16,6 +15,11 @@ import java.util.*;
 @SuppressWarnings("checkstyle:WhitespaceAround")
 public class SqlRuParse implements Parse {
    // public static List<Post> base = new ArrayList<>();
+    private final DateTimeParser dateTimeParser;
+
+    public SqlRuParse(DateTimeParser dateTimeParser) {
+        this.dateTimeParser = dateTimeParser;
+    }
 
     @Override
     public List<Post> list(String link) throws IOException {
@@ -41,7 +45,8 @@ public class SqlRuParse implements Parse {
         String description = descr.get(1).text();
         String title = titles.get(0).text();
         System.out.println(link);
-        LocalDateTime localDateTime = new SqlRuDateTimeParser().parse(timik.get(0).text());
+        //LocalDateTime localDateTime = new SqlRuDateTimeParser().parse(timik.get(0).text());
+        LocalDateTime localDateTime = dateTimeParser.parse(timik.get(0).text());
         System.out.println("Formatted data from Vacancy - " + localDateTime.format(DateTimeFormatter.ofPattern("d MMM yy, HH:mm")));
         Post result = new Post(0, title, link, description, localDateTime);
         System.out.println(result);
@@ -87,7 +92,7 @@ public class SqlRuParse implements Parse {
     public static void main(String[] args) throws IOException {
         String urlName = "https://www.sql.ru/forum/job-offers";
         List<Post> result = new ArrayList<>();
-        SqlRuParse testBase = new SqlRuParse();
+        SqlRuParse testBase = new SqlRuParse(new SqlRuDateTimeParser());
         result.addAll(testBase.list(urlName));
         for (int i = 2; i < 6; i++) {
             String usrlNextPageNumber = urlName + "/" + i;

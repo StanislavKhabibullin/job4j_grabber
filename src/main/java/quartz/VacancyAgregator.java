@@ -7,6 +7,7 @@ import jdbc.Store;
 import jdbc.StoreSqlBase;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
+import utils.SqlRuDateTimeParser;
 
 
 import java.io.IOException;
@@ -50,7 +51,7 @@ public class VacancyAgregator implements Grab {
     public static void main(String[] args) throws SchedulerException, SQLException, IOException, ClassNotFoundException {
         VacancyAgregator va = new VacancyAgregator();
        // va.timeTasks();
-        SqlRuParse parseArgument = new SqlRuParse();
+        SqlRuParse parseArgument = new SqlRuParse(new SqlRuDateTimeParser());
         StoreSqlBase storeArgument = new StoreSqlBase();
         va.init(parseArgument, storeArgument, va.timeTasks());
     }
