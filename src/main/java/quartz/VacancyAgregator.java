@@ -10,16 +10,20 @@ import org.quartz.impl.StdSchedulerFactory;
 import utils.SqlRuDateTimeParser;
 
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import static org.quartz.JobBuilder.*;
 import static org.quartz.SimpleScheduleBuilder.*;
 import static org.quartz.TriggerBuilder.*;
 
 public class VacancyAgregator implements Grab {
+    private static String pathproperties =
+            "C:\\projects\\job4j_grabber\\src\\main\\resources\\storeSqlBase.properties";
     private String urlName = "https://www.sql.ru/forum/job-offers";
 
     private Scheduler timeTasks() throws SchedulerException {
@@ -51,9 +55,13 @@ public class VacancyAgregator implements Grab {
     public static void main(String[] args) throws SchedulerException, SQLException, IOException, ClassNotFoundException {
         VacancyAgregator va = new VacancyAgregator();
        // va.timeTasks();
-        SqlRuParse parseArgument = new SqlRuParse(new SqlRuDateTimeParser());
-        StoreSqlBase storeArgument = new StoreSqlBase();
-        va.init(parseArgument, storeArgument, va.timeTasks());
+        try (FileInputStream in = new FileInputStream(pathproperties)) {
+            Properties properties = new Properties();
+            properties.load(in);
+            SqlRuParse parseArgument = new SqlRuParse(new SqlRuDateTimeParser());
+            StoreSqlBase storeArgument = new StoreSqlBase(properties);
+            va.init(parseArgument, storeArgument, va.timeTasks());
+        }
     }
 
     public static class Vacant implements Job { // класс, реализующий интерфейс Job, внутри этого класса описываем требуемые действия

@@ -16,6 +16,23 @@ public class StoreSqlBase implements Store {
             "C:\\projects\\job4j_grabber\\src\\main\\resources\\storeSqlBase.properties";
     private static Connection connect;
 
+    public StoreSqlBase(Properties prop) {
+        try {
+            Class.forName(prop.getProperty("driver-class-name"));
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            connect = DriverManager.getConnection(
+                    prop.getProperty("url"),
+                    prop.getProperty("username"),
+                    prop.getProperty("password")
+            );
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
     private void init() throws IOException, ClassNotFoundException, SQLException {
         try (FileInputStream in = new FileInputStream(pathproperties)) {
             Properties properties = new Properties();
@@ -31,8 +48,7 @@ public class StoreSqlBase implements Store {
 
     private void createTable() throws SQLException {
 
-        Statement statement = connect.createStatement();
-        try {
+        try (Statement statement = connect.createStatement()) {
             String sql = String.format(
                     "Create table if not exists "
                             + "razr"
@@ -44,8 +60,6 @@ public class StoreSqlBase implements Store {
             );
             statement.execute(sql);
             System.out.println(getTableScheme(connect, "razr"));
-        } finally {
-            statement.close();
         }
     }
 
@@ -108,16 +122,20 @@ public class StoreSqlBase implements Store {
     }
 
     public static void main(String[] args) throws SQLException, IOException, ClassNotFoundException {
-        StoreSqlBase testBase = new StoreSqlBase();
-        testBase.init();
-      //  testBase.save(new Post(0, "1", "", "", LocalDateTime.now()));
-        List<Post> result = testBase.getAll();
-        for (Post element
-                :result) {
-            System.out.println(element);
+        try (FileInputStream in = new FileInputStream(pathproperties)) {
+            Properties properties = new Properties();
+            properties.load(in);
+
+            StoreSqlBase testBase = new StoreSqlBase(properties);
+            //  testBase.save(new Post(0, "1", "", "", LocalDateTime.now()));
+            List<Post> result = testBase.getAll();
+            for (Post element
+                    : result) {
+                System.out.println(element);
+            }
+            Post finder = testBase.findById(2);
+            System.out.println("id = 2; Element - " + finder);
         }
-        Post finder = testBase.findById(2);
-        System.out.println("id = 2; Element - " + finder);
 
     }
 
