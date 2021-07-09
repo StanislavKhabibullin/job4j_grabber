@@ -13,6 +13,10 @@ import utils.SqlRuDateTimeParser;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.nio.charset.Charset;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +32,27 @@ public class VacancyAgregator implements Grab {
     private String urlName = "https://www.sql.ru/forum/job-offers";
 
     private Properties prop = new Properties();
+
+    public void web(Store store) {
+        new Thread(() -> {
+            try (ServerSocket server = new ServerSocket(Integer.parseInt(prop.getProperty("port")))) {
+                while (!server.isClosed()) {
+                    Socket socket = server.accept();
+                    try (OutputStream out = socket.getOutputStream()) {
+                        out.write("HTTP/1.1 200 OK\r\n\r\n".getBytes());
+                        for (Post post : store.getAll()) {
+                            out.write(post.toString().getBytes(Charset.forName("Windows-1251")));
+                            out.write(System.lineSeparator().getBytes());
+                        }
+                    } catch (IOException io) {
+                        io.printStackTrace();
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
+    }
 
     public Store store() throws IOException {
         setProp();
@@ -92,6 +117,7 @@ public class VacancyAgregator implements Grab {
        SqlRuParse parseArgument = new SqlRuParse(new SqlRuDateTimeParser());
        Store storeArgument = va.store();
        va.init(parseArgument, storeArgument, scheduler);
+       va.web(storeArgument);
     }
 
     public static class Vacant implements Job { // класс, реализующий интерфейс Job, внутри этого класса описываем требуемые действия
